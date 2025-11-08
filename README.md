@@ -18,4 +18,7 @@ Currently, it only includes basic parsing logic and some placeholder structures 
 ## 🚀 Usage
 
 ```bash
+Install all needed requirements by
+py -m pip install 'name'
+
 python main.py
