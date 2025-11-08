@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Dashboard - PriceTracker</title>
+        <link rel="icon" href="/static/favicon.ico" />
+        <link rel="stylesheet" href="/static/styles.css">
+
+        <meta name="description" content="PriceTracker - helps you get competitors' prices very quickly!">
+        <meta name="keywords" content="PriceTracker, parser, cannabis, prices, price, money, tracker">
+        <meta name="author" content="strexxter">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+
+        <meta property="og:image" content="%PUBLIC_URL%/assets/logos/flow_logo.png">
+        <meta property="og:title" content="PriceTracker - the most effective parser">
+        <meta property="og:description" content="PriceTracker - helps you get competitors' prices very quickly!">
+        <meta property="og:url" content="https://127.0.0.1:5000">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="en_EN">
+        <meta property="og:site_name" content="PriceTracker">
+    </head>
+    <body>
+        <div class="top-bar">
+            <div class="top-bar-name">PriceTracker</div>
+        </div>
+        <div class="interactive-toolbar">
+            <div class="update-btn">Update</div>
+            <div class="dropdowns">
+                <div class="dropdown" id="store-filter">
+                    <div class="dropbtn">All ▾</div>
+                    <div class="dropdown-content">
+                        <div class="item">All</div>
+                        <div class="item">Similar</div>
+                        <div class="item">Sanvivo</div>
+                        <div class="item">Competitors</div>
+                    </div>
+                </div>
+
+                <div class="dropdown" id="sort-filter">
+                    <div class="dropbtn">In ascending ▾</div>
+                    <div class="dropdown-content">
+                        <div class="item">In ascending</div>
+                        <div class="item">By descending</div>
+                        <div class="item">THC ascending</div>
+                        <div class="item">THC descending</div>
+                        <div class="item">CBD ascending</div>
+                        <div class="item">CBD descending</div>
+                        <div class="item">Last price update</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards-container"></div>
+        <div class="modal" id="card-modal">
+            <div class="modal-content">
+                <span class="modal-close" id="modal-close">&times;</span>
+                <div id="modal-body"></div>
+                <div class="graph-container" id="graph-container"></div>
+            </div>
+        </div>
+
+        <button id="load-more-btn" style="display: none;">Load more</button>
+        <button id="scroll-top-btn" title="Go to top">↑</button>
+        
+        <script src="/static/script.js"></script>
+        <script src="/static/products.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    </body>
+</html>
